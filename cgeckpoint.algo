@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    sentence:STRING;
+    nbrlettres,nbrvowels,nbrmot:INTEGER:=0;
+BEGIN
+    sentence:="hello world of degital"
+     FOR i FROM 1 TO sentence.length STEP 1 DO 
+    IF (sentence[i]!=" ") THEN
+     nbrlettres++;
+    END_IF
+    END_FOR
+
+    FOR i FROM 1 TO sentence.length STEP 1 DO 
+    IF (sentence[i]==" ") THEN
+     nbrmot++;
+    END_IF
+    END_FOR
+   
+    FOR i FROM 1 TO sentence.length STEP 1 DO 
+    IF (sentence[i]=="a" or sentence[i]=="e" or sentence[i]=="i" or sentence[i]=="o" or sentence[i]=="u" or sentence[i]=="y" ) THEN
+     nbrvowels++;
+    END_IF
+    END_FOR
+    
+    nbrmot=nbrmot+1;
+    write(nbrvowels)
+    write(nbrmot)
+    write(nbrlettres)
+    
+END
